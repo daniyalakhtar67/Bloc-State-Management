@@ -1,4 +1,5 @@
-import 'package:bloc/view/equatable/equatable.dart';
+import 'package:Bloc/Ui/counter/counter_Screen.dart';
+import 'package:Bloc/view/equatable/equatable.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: EquatableTesting(),
+      home: CounterScreen(),
     );
   }
 }
