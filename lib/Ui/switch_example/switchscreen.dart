@@ -28,7 +28,10 @@ class _SwitchscreenState extends State<Switchscreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text('Notification'),
-              BlocBuilder<SwitchBloc,SwitchState>(builder: (context,state){
+              BlocBuilder<SwitchBloc,SwitchState>(
+                  buildWhen: ((previous, current) => previous.isSwitch!=current.isSwitch),
+                  builder: (context,state){
+
                 return Switch(value: state.isSwitch,onChanged: (newValue){
                   context.read<SwitchBloc>().add(EnableorDiableNotification());
                 });
@@ -39,16 +42,16 @@ class _SwitchscreenState extends State<Switchscreen> {
            return Container(
              height: 200,
              decoration: BoxDecoration(
-               color: Colors.red.withOpacity(state.isSlider)
+               color: Colors.red.withOpacity(state.isSlider),
              ),
            );
          }),
           SizedBox(height: 50),
-          BlocBuilder<SwitchBloc,SwitchState>(builder: (context,state){
+          BlocBuilder<SwitchBloc,SwitchState>(
+              buildWhen: ((previous, current) => previous.isSlider!=current.isSlider),
+              builder: (context,state){
             return     Slider(value: state.isSlider, onChanged: (value){
-              setState(() {
-                value = value;
-              });
+             context.read<SwitchBloc>().add(SliderEvent(value: value));
             });
           })
         ],

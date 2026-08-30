@@ -14,5 +14,5 @@ class SwitchState extends Equatable{
      );
 
    }
-   List<Object?>get props =>[isSwitch];
+   List<Object?>get props =>[isSwitch,isSlider];
 }

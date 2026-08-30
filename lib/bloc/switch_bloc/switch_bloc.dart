@@ -11,6 +11,7 @@ class SwitchBloc extends Bloc<SwitchEvent,SwitchState>{
     emit(state.copyWith(isSwitch: !state.isSwitch));
   }
   void sliderfunction(SliderEvent event, Emitter<SwitchState>emit){
-    emit(state.copyWith(isSlider: state.isSlider));
+    emit(state.copyWith(isSlider: event.value));
   }
 }
+
