@@ -1,5 +1,7 @@
 import 'package:Bloc/Ui/counter/counter_Screen.dart';
+import 'package:Bloc/Ui/switch_example/switchscreen.dart';
 import 'package:Bloc/bloc/counter/bloc_counter.dart';
+import 'package:Bloc/bloc/switch_bloc/switch_bloc.dart';
 import 'package:Bloc/view/equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -12,14 +14,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(create: (_)=>BlocCounter(),
+    return BlocProvider(create: (_)=>SwitchBloc(),
     child:  MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: CounterScreen(),
+      home: Switchscreen(),
     ),
     );
   }
