@@ -2,9 +2,12 @@ import 'package:Bloc/Ui/counter/counter_Screen.dart';
 import 'package:Bloc/Ui/switch_example/switchscreen.dart';
 import 'package:Bloc/bloc/counter/bloc_counter.dart';
 import 'package:Bloc/bloc/image_picker/image_picker_bloc.dart';
+import 'package:Bloc/bloc/post/post_bloc.dart';
 import 'package:Bloc/bloc/switch_bloc/switch_bloc.dart';
 import 'package:Bloc/utils/image_picker_utils.dart';
 import 'package:Bloc/view/equatable/equatable.dart';
+import 'package:Bloc/view/post/post_screen.dart';
+import 'package:Bloc/view/todo_Screen/todo_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 void main() {
@@ -21,13 +24,14 @@ class MyApp extends StatelessWidget {
       BlocProvider(create: (_)=>SwitchBloc()),
       BlocProvider(create: (_)=>BlocCounter()),
       BlocProvider(create: (_)=>ImagePickerBloc(ImagePickerUtils())),
+      BlocProvider(create: (_)=>PostBloc()),
     ], child:     MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Switchscreen(),
+      home: PostScreen(),
     ),
     );
   }
