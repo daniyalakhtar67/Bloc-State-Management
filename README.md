@@ -1,17 +1,32 @@
-# bloc
+# BLoC State Management
 
-A new Flutter project.
+A Flutter project created to learn and implement **BLoC (Business Logic Component) state management**.
 
-## Getting Started
+## Overview
 
-This project is a starting point for a Flutter application.
+This project focuses on understanding how BLoC manages application state in Flutter by separating **UI, events, states, and business logic**.
 
-A few resources to get you started if this is your first Flutter project:
+It demonstrates how user actions are handled through events, processed by the BLoC, and reflected in the UI through different states.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## What I Learned
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* BLoC state management in Flutter
+* Creating and handling Events
+* Creating and managing States
+* Implementing BLoC classes
+* Connecting BLoC with Flutter widgets
+* Using `BlocProvider`
+* Using `BlocBuilder`
+* Understanding Event → BLoC → State flow
+* Separating business logic from the UI
+* Managing UI updates based on state changes
+
+## Tech Stack
+
+* **Flutter**
+* **Dart**
+* **flutter_bloc**
+
+## Purpose
+
+The main purpose of this project is to build a practical understanding of **BLoC architecture and state management** and learn how to create a predictable flow between user actions, business logic, and UI updates.
